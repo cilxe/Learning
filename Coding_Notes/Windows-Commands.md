@@ -4,7 +4,7 @@
 
 1. **Apply to Current Commands Environment**
    
-   - [CD](#cd)
+   - [cd / chdir](#cd)
    - chcp
    - cmd
    - echo
@@ -86,4 +86,16 @@
 
 
 
-<h6 id=cd>CD</h6>
+#### <h2 id=cd>CD / CHDIR</h2>
+
+Default without parameter — Display the name of the current folder.
+
+```
+# to a specified folder
+cd [/d] <drive>:<path>  
+chdir [/d] <drive>:<path>
+
+# to parent folder
+cd [..]  
+chdir [..]
+```
