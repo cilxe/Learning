@@ -31,6 +31,15 @@ grip
 exploit  
 temptate  
 antagony  
+tamer  
+intrigue  
+blunt  
+jest  
+lavish  
+recept  
+coruscate  
+plauditory  
+
 
 
 
