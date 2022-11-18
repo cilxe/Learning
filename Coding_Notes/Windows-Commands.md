@@ -4,7 +4,7 @@
 
 1. **Apply to Current Commands Environment**
    
-   - [CD](#1)
+   - [CD](#cd)
    - chcp
    - cmd
    - echo
@@ -14,8 +14,6 @@
    - if
    - for
    - goto
-   
-   
 
 2. **Apply to System, Runing Programs**
    
@@ -53,8 +51,6 @@
    
    - wmic
 
-
-
 3. **Apply to Files**
 - attrib
 
@@ -90,4 +86,4 @@
 
 
 
-<h6 id="cd">CD</h2>
+<h6 id=cd>CD</h6>
