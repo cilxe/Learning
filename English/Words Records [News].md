@@ -15,6 +15,33 @@ reconcile
 recursive  
 implicit  
 esteem 
+rendezvous 
+wrench    
+hurl  
+obscenity  
+unparalleled  
+pellet  
+clavicle  
+abrasion  
+sabotage  
+bane  
+summit  
+fluster  
+grip  
+exploit  
+temptate  
+antagony  
+tamer  
+intrigue  
+blunt  
+jest  
+lavish  
+recept  
+coruscate  
+plauditory  
+
+
+
 
 
 
@@ -130,3 +157,5 @@ rigid
 
 
 # 
+
+︽
