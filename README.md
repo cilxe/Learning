@@ -3,7 +3,6 @@
 ## Learning Experience
 
 #### English
-**<a href="English\Vocabulary Notes.xlsx" target="_blank">Vocabulary Notes</a>**
 
 **<a href="English\Words Records [News].md" target="_blank">Words Records [News]</a>**
 
