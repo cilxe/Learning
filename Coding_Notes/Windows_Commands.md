@@ -1,8 +1,8 @@
 # Windows Commands & Batch Scripts
 
-#### Commands
+### Commands
 
-1. **Apply to Current Commands Environment**
+##### 1. **Apply to Current Commands Environment**
    
    - [cd / chdir](#cd)
    - [chcp](#chcp)
@@ -16,7 +16,7 @@
   
    - goto
 
-2. **Apply to System, Runing Programs**
+##### 2. **Apply to System, Runing Programs**
    
    - convert [Disk Type]
    
@@ -52,7 +52,7 @@
    
    - wmic
 
-3. **Apply to Files**
+##### 3. **Apply to Files**
    - attrib
 
    - certUtil
