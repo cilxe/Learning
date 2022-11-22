@@ -1,7 +1,7 @@
 # Ignore directories
 Books Read, Quotations/  
 Unpack/
-Coding_Notes/.vscode/
+.vscode
 
 # Ignore files
 Gengo - Standard Test.docx  
