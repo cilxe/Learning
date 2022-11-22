@@ -52,37 +52,37 @@
    - wmic
 
 3. **Apply to Files**
-- attrib
+   - attrib
 
-- certUtil
+   - certUtil
 
-- copy
+   - copy
 
-- del
+   - del
 
-- erase
+   - erase
 
-- dir
+   - dir
 
-- fc  [fc.exe]
+   - fc  [fc.exe]
 
-- find  [String in file]
+   - find  [String in file]
 
-- findstr
+   - findstr
 
-- md
+   - md
 
+   - mkdir
 
-- rd
+   - rd
 
-- rmdir
+   - rmdir
 
-- move
+   - move
 
-- rename
+   - rename
 
-- replace
-
+   - replace
 
 
 #### <h2 id=cd>CD / CHDIR</h2>
