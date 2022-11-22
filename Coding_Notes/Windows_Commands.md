@@ -85,7 +85,7 @@
    - replace
 
 
-#### <h2 id=cd>CD / CHDIR</h2>
+<h3 id=cd>CD / CHDIR</h3>
 
 Default without parameter — Display the name of the current folder.
 
@@ -99,4 +99,4 @@ cd [..]
 chdir [..]
 ```
 
-#### <h2 id=chcp>CHCP</h2>
+<h3 id=chcp>CHCP</h3>
