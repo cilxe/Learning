@@ -91,11 +91,11 @@
 Default without parameter — Display the name of the current folder.
 
 ```
-# to a specified folder
+@REM locate to a specified folder
 cd [/d] <drive>:<path>  
 chdir [/d] <drive>:<path>
 
-# to parent folder
+@REM locate to parent folder
 cd [..]  
 chdir [..]
 ```
