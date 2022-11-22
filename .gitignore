@@ -1,10 +1,11 @@
-# 忽略目录
+# Ignore directories
 Books Read, Quotations/  
-Crack/
+Unpack/
 Coding_Notes/.vscode/
-#忽略文件
+
+# Ignore files
 Gengo - Standard Test.docx  
 Push.bat
 
-#忽略Crack目录下所有文件
-/Crack/*
+# Ignore all files under the directory
+/Unpack/*
