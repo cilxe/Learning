@@ -5,7 +5,7 @@
 1. **Apply to Current Commands Environment**
    
    - [cd / chdir](#cd)
-   - chcp
+   - [chcp](#chcp)
    - cmd
    - echo
    - mode
@@ -72,7 +72,6 @@
 
 - md
 
-- mkdir
 
 - rd
 
@@ -99,3 +98,5 @@ chdir [/d] <drive>:<path>
 cd [..]  
 chdir [..]
 ```
+
+#### <h2 id=chcp>CHCP</h2>
