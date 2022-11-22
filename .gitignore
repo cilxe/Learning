@@ -1,11 +1,11 @@
 # Ignore directories
-Books Read, Quotations/  
-Unpack/  
+Books Read, Quotations/
+Unpack/
 .vscode
 
 # Ignore files
-Gengo - Standard Test.docx  
+Gengo - Standard Test.docx
 Push.bat
 
 # Ignore all files under the directory
-/Unpack/*  
+/Unpack/*

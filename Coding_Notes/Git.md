@@ -101,6 +101,8 @@ doc/**/.pdf
 
 # re-track files which is ignored
 git add -f <file or directory>
+
+@REM Those files/directoies which already have been committed to repository will not be ignored by Git.
 ```
 
 ###### Ignore files from config file (.gitignore)
