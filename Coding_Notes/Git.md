@@ -308,7 +308,7 @@ git config --list
 git config user.name
 
 # Add credential 
-## [-global] for all repositories ##
+## [--global] for all repositories ##
 git config --global user.name "your name"
 git config --global user.email name@example.com
 
@@ -319,6 +319,10 @@ git config --global --replace-all user.email@name.email.com
 # Remove credential
 git config --global --unset user.name "your name"
 git config --global --unset --global user.email "name@example.com"
+```
+```
+# Set Private SSH key path  [--global] apply for all repos
+git config --global core.sshCommand "ssh -i /profile/.ssh/privateKey"
 ```
 
 ##### Add Tag to repository's history
