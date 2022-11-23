@@ -4,7 +4,6 @@
 
 
 #### Initialising a Repository
-
 1. Use a local directory
 
 ```
@@ -25,10 +24,14 @@ git commit -m "Initial project version"
 git clone [Remote Repository URL]
 ```
 
-Cone a repository for a specified name
+-- Cone a repository for a specified name
 
 ```
 git clone  [Remote Repository URL] [Repo_Name]
+```
+-- Clone form another working repository
+```
+git clone git@work.github.com:workAccountName/project.git
 ```
 
 ##### Check the status of your files: [new / staged / unstaged]
@@ -249,8 +252,53 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 # Checking existing SSH Keys [id_rsa.pub/id_ecdsa.pub/id_ed25519.pub]
-ls -al ~/.ssh
+ls ~/.ssh
+
+# Multiple SSH Keys with remote accounts
+ssh-keygen -t rsa -C work@email.com
+ssh-keygen -t rsa -C organization@email.com
+
+# Ps: Enter file with 【Abosolute path】 in which to save the key
 ```
+
+##### Updating SSH Config file
+
+```
+# create and edit config file
+touch config
+nano config
+```
+-- Nano Editor [Ctrl+S / Ctrl+O) to save, Ctrl+X to exit]
+```
+# Personal account, - the default config  with alias HostName
+Host github.com
+   HostName personal.github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_personal
+   
+# Work account
+Host github.com-work  #
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_work
+```
+
+##### Add SSH Keys to SSH Agent
+
+```
+# Start SSH Agent
+eval `ssh-agent -s`
+
+# Add SSH Keys to SSH Agent
+ssh-add id_rsa_personal
+ssh-add id_rsa_organisation
+```
+```
+# Checkin if it's successfully connected to github
+ssh -T git@github.com
+```
+
+##### Creating and Updating SSH Config file, Add to SSH Agent
 
 ##### Manage credentials
 
@@ -324,3 +372,17 @@ git branch -d <Branch_Name>
 # Rename a Branch
 git branch -m <Old_Name> <New_Name>
 ```
+
+## Commonly Issues
+
+##### SSH Key Issues
+-- Error Message: 
+ "Could not open a connection to your authentication agent."
+   Reason: SSH Agent isn't running currently.
+   Solution: Start SSH Agent
+   ```
+      eval `ssh-agent -s`
+   ```
+
+
+
