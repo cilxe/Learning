@@ -1,7 +1,12 @@
-# Get into Git (Windows)
+## Get into Git (Windows)
 
-##### Basic manual from [Git-scm](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
+#### Basic manual from [Git-scm](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 
+#### Config Git Environment
+```
+# set git http proxy
+git config --global http.proxy [http://][host]:[port]
+```
 
 #### Initialising a Repository
 1. Use a local directory
@@ -10,7 +15,7 @@
 git init
 ```
 
-##### Specify which file to be track
+#### Specify which file to be track
 
 ```
 git add *c
@@ -34,7 +39,7 @@ git clone  [Remote Repository URL] [Repo_Name]
 git clone git@work.github.com:workAccountName/project.git
 ```
 
-##### Check the status of your files: [new / staged / unstaged]
+#### Check the status of your files: [new / staged / unstaged]
 
 ```
 git staus
@@ -56,13 +61,13 @@ echo "Learning" > README.md
 echo "Learning experiences" >> README.md
 ```
 
-##### Traking new files:
+#### Traking new files:
 
 ```
 git add README.md
 ```
 
-##### Staging modified / new files:
+#### Staging modified / new files:
 
 ```
 # update modified / new file to be committed
@@ -75,7 +80,7 @@ git reset HEAD <file>
 git checkout -- <file>
 ```
 
-##### Ignoring files
+#### Ignoring files
 
 ```
 # ignore specific file
@@ -107,13 +112,13 @@ git add -f <file or directory>
 @REM  Files or directoies that already have been committed to the repository will not be ignored by Git.
 ```
 
-##### Ignore files from config file (.gitignore)
+#### Ignore files from config file (.gitignore)
 
 ```
 touch .gitignore
 ```
 
-##### Viewing Your Staged and Unstaged Changes
+#### Viewing Your Staged and Unstaged Changes
 
 ```
 git status
@@ -125,19 +130,19 @@ git diff
 git diff --staged
 ```
 
-##### Skipping the staging area
+#### Skipping the staging area
 
 ```
 git commit -a
 ```
 
-##### Removing files
+#### Removing files
 
 ```
 git rm <file>
 ```
 
-##### Moving files (Rename files)
+#### Moving files (Rename files)
 
 ```
 git mv <file>
@@ -146,7 +151,7 @@ git mv <file>
 git README.md README
 ```
 
-##### [Viewing the commit history](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+#### [Viewing the commit history](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
 
 ```
 git log
@@ -159,7 +164,7 @@ git log -p] -2
 git log --stat
 ```
 
-##### Undoing things
+#### Undoing things
 
 ```
 git commit -m "Initial commit"
@@ -175,7 +180,7 @@ git reset HEAD <file>
 git checkout -- <file>
 ```
 
-##### Undoing things with Git Resotre
+#### Undoing things with Git Resotre
 
 ```
 # unstage file
@@ -204,7 +209,7 @@ git clone <URL>
 git fetch <short_name>
 ```
 
-##### Showing which remote servers have been configured
+#### Showing which remote servers have been configured
 
 ```
 git remote
@@ -213,25 +218,25 @@ git remote
 git remote -v
 ```
 
-##### Adding Remote Repositories
+#### Adding Remote Repositories
 
 ```
 git remote add <short_name> <url>
 ```
 
-##### Fetching and Pulling from Remotes
+#### Fetching and Pulling from Remotes
 
 ```
 git fetch <short_name>
 ```
 
-##### Pushing commits to your Remotes
+#### Pushing commits to your Remotes
 
 ```
 git push <remote_name> <branch_name>
 ```
 
-##### Renaming and Removing Remotes
+#### Renaming and Removing Remotes
 
 ```
 git remote rename <Current_Name> <Name>
@@ -240,7 +245,7 @@ git remote rename <Current_Name> <Name>
 git remote remove <Remote_Name>
 ```
 
-##### Generating Public/ Private  SSH Key 
+#### Generating Public/ Private  SSH Key 
 
 ```
 # Generate for local host user
@@ -261,7 +266,7 @@ ssh-keygen -t rsa -C organization@email.com
 # Ps: Enter file with 【Abosolute path】 in which to save the key
 ```
 
-##### Updating SSH Config file
+#### Updating SSH Config file
 
 ```
 # create and edit config file
@@ -283,7 +288,7 @@ Host github.com-work  #
    IdentityFile ~/.ssh/id_rsa_work
 ```
 
-##### Add SSH Keys to SSH Agent
+#### Add SSH Keys to SSH Agent
 
 ```
 # Start SSH Agent
@@ -301,9 +306,9 @@ ssh-add -D
 ssh -T git@github.com
 ```
 
-##### Creating and Updating SSH Config file, Add to SSH Agent
+#### Creating and Updating SSH Config file, Add to SSH Agent
 
-##### Manage credentials
+#### Manage credentials
 
 ```
 # Show current credentials
@@ -328,7 +333,7 @@ git config --global --unset --global user.email "name@example.com"
 git config --global core.sshCommand "ssh -i /profile/.ssh/privateKey"
 ```
 
-##### Add Tag to repository's history
+#### Add Tag to repository's history
 
 ```
 # [-l]  or [--list]
@@ -345,19 +350,19 @@ git config --global alias.ci commit
 
 ## Git Branching
 
-##### Create and Deleting a branch
+#### Create and Deleting a branch
 
 ```
 git branch testing
 ```
 
-##### Switching Branches
+#### Switching Branches
 
 ```
 git checkout testing
 ```
 
-##### Merge Branches
+#### Merge Branches
 
 ```
 # Switch to 'main' branch
@@ -367,7 +372,7 @@ git checkout main
 git merge 'branch_21'
 ```
 
-##### Branch Management
+#### Branch Management
 
 ```
 # Show branches
@@ -382,7 +387,7 @@ git branch -m <Old_Name> <New_Name>
 
 ## Commonly Issues
 
-##### SSH Key Issues
+#### SSH Key Issues
 -- Error Message: 
  "Could not open a connection to your authentication agent."
    Reason: SSH Agent isn't running currently.
