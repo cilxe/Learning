@@ -237,18 +237,26 @@ git remote rename <Current_Name> <Name>
 git remote remove <Remote_Name>
 ```
 
-##### Add Tag to repository's history
+##### Generating Public/ Private  SSH Key 
 
 ```
-# [-l]  or [--list]
-git tag -l "v1.0.0"
+# Generate for local host user
+ssh-keygen -o
+
+# generate a key which bind with email
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+# Checking existing SSH Keys [id_rsa.pub/id_ecdsa.pub/id_ed25519.pub]
+ls -al ~/.ssh
 ```
 
-#### Manage credentials
+##### Manage credentials
 
 ```
 # Show current credentials
-git confi --list
+git config --list
 git config user.name
 
 # Add credential 
@@ -263,6 +271,13 @@ git config --global --replace-all user.email@name.email.com
 # Remove credential
 git config --global --unset user.name "your name"
 git config --global --unset --global user.email "name@example.com"
+```
+
+##### Add Tag to repository's history
+
+```
+# [-l]  or [--list]
+git tag -l "v1.0.0"
 ```
 
 ## Git Aliases
@@ -308,19 +323,4 @@ git branch -d <Branch_Name>
 
 # Rename a Branch
 git branch -m <Old_Name> <New_Name>
-```
-
-##### Generating Public/ Private  SSH Key 
-
-```
-# Generate for local host user
-ssh-keygen -o
-
-# generate a key which bind with email
-ssh-keygen -t ed25519 -C "your_email@example.com"
-
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-
-# Checking existing SSH Keys [id_rsa.pub/id_ecdsa.pub/id_ed25519.pub]
-ls -al ~/.ssh
 ```
