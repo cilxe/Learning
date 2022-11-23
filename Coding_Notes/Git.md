@@ -292,6 +292,9 @@ eval `ssh-agent -s`
 # Add SSH Keys to SSH Agent
 ssh-add id_rsa_personal
 ssh-add id_rsa_organisation
+
+# Delete existing SSH Keys
+ssh-add -D
 ```
 ```
 # Checkin if it's successfully connected to github
