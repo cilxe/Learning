@@ -1,8 +1,7 @@
 # Get into Git (Windows)
 
-###### Basic manual from [Git-scm](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
+##### Basic manual from [Git-scm](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 
-#### 
 
 #### Initialising a Repository
 
@@ -12,7 +11,7 @@
 git init
 ```
 
-###### Specify which file to be track
+##### Specify which file to be track
 
 ```
 git add *c
@@ -32,7 +31,7 @@ Cone a repository for a specified name
 git clone  [Remote Repository URL] [Repo_Name]
 ```
 
-###### Check the status of your files: [new / staged / unstaged]
+##### Check the status of your files: [new / staged / unstaged]
 
 ```
 git staus
@@ -54,13 +53,13 @@ echo "Learning" > README.md
 echo "Learning experiences" >> README.md
 ```
 
-###### Traking new files:
+##### Traking new files:
 
 ```
 git add README.md
 ```
 
-###### Staging modified / new files:
+##### Staging modified / new files:
 
 ```
 # update modified / new file to be committed
@@ -73,7 +72,7 @@ git reset HEAD <file>
 git checkout -- <file>
 ```
 
-###### Ignoring files
+##### Ignoring files
 
 ```
 # ignore specific file
@@ -105,13 +104,13 @@ git add -f <file or directory>
 @REM  Files or directoies that already have been committed to the repository will not be ignored by Git.
 ```
 
-###### Ignore files from config file (.gitignore)
+##### Ignore files from config file (.gitignore)
 
 ```
 touch .gitignore
 ```
 
-###### Viewing Your Staged and Unstaged Changes
+##### Viewing Your Staged and Unstaged Changes
 
 ```
 git status
@@ -123,19 +122,19 @@ git diff
 git diff --staged
 ```
 
-###### Skipping the staging area
+##### Skipping the staging area
 
 ```
 git commit -a
 ```
 
-###### Removing files
+##### Removing files
 
 ```
 git rm <file>
 ```
 
-###### Moving files (Rename files)
+##### Moving files (Rename files)
 
 ```
 git mv <file>
@@ -144,7 +143,7 @@ git mv <file>
 git README.md README
 ```
 
-###### [Viewing the commit history](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+##### [Viewing the commit history](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
 
 ```
 git log
@@ -157,7 +156,7 @@ git log -p] -2
 git log --stat
 ```
 
-###### Undoing things
+##### Undoing things
 
 ```
 git commit -m "Initial commit"
@@ -173,7 +172,7 @@ git reset HEAD <file>
 git checkout -- <file>
 ```
 
-###### Undoing things with Git Resotre
+##### Undoing things with Git Resotre
 
 ```
 # unstage file
@@ -183,7 +182,7 @@ git restore --staged <file>
 git restore <file>
 ```
 
-# undoing commits
+## Undoing commits
 ```
 #  revoke last commit  [soft] keep changes
 git reset --soft HEAD~1
@@ -192,7 +191,7 @@ git reset --hard HEAD~1
 # return to a specific commit with SHA
 git reset --hard 0xx1x2x3
 ```
-## Working with Remotes
+## Git Remotes
 
 ```
 # clone frome a remote server
@@ -202,7 +201,7 @@ git clone <URL>
 git fetch <short_name>
 ```
 
-###### Showing which remote servers have been configured
+##### Showing which remote servers have been configured
 
 ```
 git remote
@@ -211,25 +210,25 @@ git remote
 git remote -v
 ```
 
-###### Adding Remote Repositories
+##### Adding Remote Repositories
 
 ```
 git remote add <short_name> <url>
 ```
 
-###### Fetching and Pulling from Remotes
+##### Fetching and Pulling from Remotes
 
 ```
 git fetch <short_name>
 ```
 
-###### Pushing commits to your Remotes
+##### Pushing commits to your Remotes
 
 ```
 git push <remote_name> <branch_name>
 ```
 
-###### Renaming and Removing Remotes
+##### Renaming and Removing Remotes
 
 ```
 git remote rename <Current_Name> <Name>
@@ -276,19 +275,19 @@ git config --global alias.ci commit
 
 ## Git Branching
 
-###### Create and Deleting a branch
+##### Create and Deleting a branch
 
 ```
 git branch testing
 ```
 
-###### Switching Branches
+##### Switching Branches
 
 ```
 git checkout testing
 ```
 
-###### Merge Branches
+##### Merge Branches
 
 ```
 # Switch to 'main' branch
@@ -298,7 +297,7 @@ git checkout main
 git merge 'branch_21'
 ```
 
-#### Branch Management
+##### Branch Management
 
 ```
 # Show branches
@@ -311,7 +310,7 @@ git branch -d <Branch_Name>
 git branch -m <Old_Name> <New_Name>
 ```
 
-Generating Public/ Private  SSH Key 
+##### Generating Public/ Private  SSH Key 
 
 ```
 # Generate for local host user
@@ -321,4 +320,7 @@ ssh-keygen -o
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+# Checking existing SSH Keys [id_rsa.pub/id_ecdsa.pub/id_ed25519.pub]
+ls -al ~/.ssh
 ```
