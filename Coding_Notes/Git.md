@@ -287,7 +287,9 @@ Host github.com-work  #
    User git
    IdentityFile ~/.ssh/id_rsa_work
 ```
-
+``` If Needed
+# ProxyCommand /usr/bin/nc -X 5 -x 127.0.0.1:7890 %h %p
+```
 #### Add SSH Keys to SSH Agent
 
 ```

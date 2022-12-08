@@ -2,6 +2,14 @@
 
 # 
 
+### 221210
+pique  
+hypothesis  
+foster  
+telepathic  
+
+
+
 ### 221115
 repertoire  
 superficial  
@@ -35,15 +43,10 @@ tamer
 intrigue  
 blunt  
 jest  
-lavish  
+lavish  --
 recept  
 coruscate  
 plauditory  
-
-
-
-
-
 
 
 ### 221020
@@ -55,13 +58,12 @@ lad
 solemn  
 turmoil  
 souse  
-magnaminous  
-ronin  
+magnaminous   
 convey  
 charisma  
 retaliate  
 recipient  
-egregiou  
+egregious  
 
 
 ### 221010
