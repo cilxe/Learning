@@ -42,3 +42,20 @@ pyinstaller --onedir --onefile ^
       myscript.py
 ```
 
+### [SubProcess](https://docs.python.org/3/library/subprocess.html)
+ - run() 
+ - Popen()
+ - call()
+ - check_call()
+ - check_output()
+ - communicate()
+
+### [Used Python packages](https://pypi.org/)
+ - 
+ - [auto-py-to-exe](https://pypi.org/project/auto-py-to-exe/)
+ - [pyinstaller](https://pypi.org/project/pyinstaller/)
+ - [PyQt5](https://pypi.org/project/PyQt5/): &ensp;last support version for Windows 7/8
+ - [PyQt6](https://pypi.org/project/PyQt5/)
+ - [you-get](https://pypi.org/project/you-get/)
+ - [yt-dlp](https://pypi.org/project/yt-dlp/)
+ - 

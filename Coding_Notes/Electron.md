@@ -120,3 +120,32 @@ Output folder: ${Project_Folder}/out
 
 ### [Native File Drag & Drop](https://www.electronjs.org/docs/latest/tutorial/native-file-drag-drop)
 <webContents.startDrag(item)>
+
+### Code Style
+- End files with a newline.
+- Place requires in the following order:
+  - Built in Node Modules (such as path)
+  - Built in Electron Modules (such as ipc, app)
+  - Local Modules (using relative paths)
+- Place class properties in the following order:
+  - Class methods and properties (methods starting with a @)
+  - Instance methods and properties
+- Avoid platform-dependent code:
+  - Use path.join() to concatenate filenames.
+  - Use os.tmpdir() rather than /tmp when you need to reference the temporary directory.
+- app.getAppPath(name) can request the following paths by the name:
+  - {home} User's home directory.
+  - {appData}  
+    - %APPDATA% on Window
+    - $XDG_CONFIG_HOME or ~/.config on Linux
+    - ~/Library/Application Support on macOS
+  - etc... 
+  - view at [Electron API document](https://www.electronjs.org/docs/latest/api/app#appgetpathname)
+
+
+
+
+### Issue tracker
+ - shell.openPath() get non-current folder files 
+   - Resolve: [Stackoverflow](https://stackoverflow.com/questions/65918494/how-do-i-open-a-file-saved-in-the-user-directory-using-electrons-shell-api)
+ - 

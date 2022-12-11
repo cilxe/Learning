@@ -10,49 +10,44 @@ git config --global http.proxy [http://][host]:[port]
 
 #### Initialising a Repository
 1. Use a local directory
-
 ```
 git init
 ```
+2. Pull/Fetch from remote repository
+```
+git remote <RemoteName> <BranchName> <Remote SSH/HTTP URL>
+```
 
 #### Specify which file to be track
-
 ```
 git add *c
 git add LICENSE
 git commit -m "Initial project version"
 ```
-
-2. Clone from a remote existing repository
-
+- Clone from a remote existing repository
 ```
 git clone [Remote Repository URL]
 ```
-
--- Cone a repository for a specified name
-
+- Clone a repository for a specified name
 ```
 git clone  [Remote Repository URL] [Repo_Name]
 ```
--- Clone form another working repository
+- Clone form another working repository
 ```
 git clone git@work.github.com:workAccountName/project.git
 ```
 
 #### Check the status of your files: [new / staged / unstaged]
-
 ```
 git staus
 
 # Short Status  [-s] or [--short]
 git status -s
 
-# 
 git status --ignored
 ```
 
-Add a README file with project's introduction
-
+ - Add a README file with project's introduction
 ```
 # add line to a file
 echo "Learning" > README.md
@@ -62,7 +57,6 @@ echo "Learning experiences" >> README.md
 ```
 
 #### Traking new files:
-
 ```
 git add README.md
 ```
@@ -119,7 +113,6 @@ touch .gitignore
 ```
 
 #### Viewing Your Staged and Unstaged Changes
-
 ```
 git status
 
@@ -131,28 +124,21 @@ git diff --staged
 ```
 
 #### Skipping the staging area
-
 ```
 git commit -a
 ```
 
-#### Removing files
-
+#### Remove/Rename files
 ```
 git rm <file>
 ```
 
 #### Moving files (Rename files)
-
 ```
-git mv <file>
-
-# ex:
-git README.md README
+git mv <OldName> <NewName>
 ```
 
 #### [Viewing the commit history](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
-
 ```
 git log
 
@@ -160,12 +146,10 @@ git log
 # [-2 ] shows  only the last two entries
 git log -p] -2
 
-
 git log --stat
 ```
 
-#### Undoing things
-
+### Undoing things
 ```
 git commit -m "Initial commit"
 git add forgotten_file
@@ -174,14 +158,11 @@ git add forgotten_file
 # i  entering edit mode | :wd  save & exit
 git commit --amend
 
-
 # Unstage & unmodifying a file
 git reset HEAD <file>
 git checkout -- <file>
 ```
-
 #### Undoing things with Git Resotre
-
 ```
 # unstage file
 git restore --staged <file>
@@ -189,8 +170,7 @@ git restore --staged <file>
 # undo modified file
 git restore <file>
 ```
-
-## Undoing commits
+#### Undoing commits
 ```
 #  revoke last commit  [soft] keep changes
 git reset --soft HEAD~1
@@ -199,18 +179,14 @@ git reset --hard HEAD~1
 # return to a specific commit with SHA
 git reset --hard 0xx1x2x3
 ```
+
 ## Git Remotes
-
 ```
-# clone frome a remote server
+# Clone from a remote
 git clone <URL>
-
-# fetch from a branch
-git fetch <short_name>
 ```
 
 #### Showing which remote servers have been configured
-
 ```
 git remote
 
@@ -219,25 +195,22 @@ git remote -v
 ```
 
 #### Adding Remote Repositories
-
 ```
 git remote add <short_name> <url>
 ```
 
 #### Fetching and Pulling from Remotes
-
+ -- Remotes must be initialised --
 ```
 git fetch <short_name>
 ```
 
 #### Pushing commits to your Remotes
-
 ```
 git push <remote_name> <branch_name>
 ```
 
 #### Renaming and Removing Remotes
-
 ```
 git remote rename <Current_Name> <Name>
 
@@ -246,7 +219,6 @@ git remote remove <Remote_Name>
 ```
 
 #### Generating Public/ Private  SSH Key 
-
 ```
 # Generate for local host user
 ssh-keygen -o
@@ -267,13 +239,12 @@ ssh-keygen -t rsa -C organization@email.com
 ```
 
 #### Updating SSH Config file
-
 ```
 # create and edit config file
 touch config
 nano config
 ```
--- Nano Editor [Ctrl+S / Ctrl+O) to save, Ctrl+X to exit]
+**Nano Editor** [Ctrl+S / Ctrl+O) to save, Ctrl+X to exit]: 
 ```
 # Personal account, - the default config  with alias HostName
 Host github.com
@@ -287,11 +258,11 @@ Host github.com-work  #
    User git
    IdentityFile ~/.ssh/id_rsa_work
 ```
-``` If Needed
-# ProxyCommand /usr/bin/nc -X 5 -x 127.0.0.1:7890 %h %p
+``` 
+# Additional option: Add proxy
+ProxyCommand /usr/bin/nc -X 5 -x 127.0.0.1:7890 %h %p
 ```
 #### Add SSH Keys to SSH Agent
-
 ```
 # Start SSH Agent
 eval `ssh-agent -s`
@@ -308,10 +279,7 @@ ssh-add -D
 ssh -T git@github.com
 ```
 
-#### Creating and Updating SSH Config file, Add to SSH Agent
-
 #### Manage credentials
-
 ```
 # Show current credentials
 git config --list
@@ -336,14 +304,12 @@ git config --global core.sshCommand "ssh -i /profile/.ssh/privateKey"
 ```
 
 #### Add Tag to repository's history
-
 ```
 # [-l]  or [--list]
 git tag -l "v1.0.0"
 ```
 
 ## Git Aliases
-
 ```
 git config --global alias.co chekcout
 git config --global alias.br branch
@@ -352,20 +318,28 @@ git config --global alias.ci commit
 
 ## Git Branching
 
-#### Create and Deleting a branch
-
+### Branch Management
 ```
+# Show branches
+git branch
+
+# Create a branch
 git branch testing
-```
 
-#### Switching Branches
-
-```
+# Switch branches
 git checkout testing
+
+# Move/Rename a branch
+git branch -M <Old_Name> <New_Name>
+
+# Copy a branch
+git branch -C <Source_Name> <Target_Name>
+
+# Delete a branch
+git branch -D <BranchName>
 ```
 
 #### Merge Branches
-
 ```
 # Switch to 'main' branch
 git checkout main
@@ -374,26 +348,13 @@ git checkout main
 git merge 'branch_21'
 ```
 
-#### Branch Management
-
-```
-# Show branches
-git branch
-
-# Delete a branch
-git branch -d <Branch_Name>
-
-# Rename a Branch
-git branch -m <Old_Name> <New_Name>
-```
-
 ## Commonly Issues
 
 #### SSH Key Issues
 -- Error Message: 
  "Could not open a connection to your authentication agent."
-   Reason: SSH Agent isn't running currently.
-   Solution: Start SSH Agent
+   - Reason: SSH Agent isn't running currently.
+   - Solution: Start SSH Agent
    ```
       eval `ssh-agent -s`
    ```
