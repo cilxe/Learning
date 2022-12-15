@@ -4,16 +4,16 @@
 
 ### Install & uninstall package
 ```
-  py -m pip install PACKAGE_NAME  
-  py -m pip uninstall PACKAGE_NAME  
+py -m pip install PACKAGE_NAME  
+py -m pip uninstall PACKAGE_NAME  
 ```
 #### Install specific version packages
 ```
-  py -m pip install PACKAGE_NAME=VERSION
+py -m pip install PACKAGE_NAME=VERSION
 ```
 #### Install packages from requirements files
 ```
-  py -m pip install -r requirements.txt
+py -m pip install -r requirements.txt
 ```
 
 ### Python to Executable file [Pyinstaller](https://pyinstaller.org/en/stable/usage.html#using-pyinstaller)
@@ -50,7 +50,9 @@ pyinstaller --onedir --onefile ^
  - check_output()
  - communicate()
 
-### [Used Python packages](https://pypi.org/)
+### Python Formatting
+
+### [Python Package Dependencies](https://pypi.org/)
  - 
  - [auto-py-to-exe](https://pypi.org/project/auto-py-to-exe/)
  - [pyinstaller](https://pypi.org/project/pyinstaller/)
