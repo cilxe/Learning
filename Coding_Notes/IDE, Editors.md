@@ -1,4 +1,11 @@
+## Set Line-Breaks / Line-Ending  to Unix (LF)
+- Notepad ++:  Setting > Preferences > New Document
+- VS Code: Settings (Ctrl + , ) > Files:EOL
+- IDEA: Settings (Ctrl + Alt + S ) > Editor > Code Syle > General>Line Separator
+- Eclipse: Window(Top-Menu) > Preferences > Workspace > New Text File line delimeter
+
 # IDE (Integrated Developerment Environment)
+
 ## IntelliJ IDEA (JetBrains)
 
 ## Eclipse IDE
@@ -12,5 +19,4 @@
 #### Useful Shortcuts (Ctrl + K, Ctrl + S)
  - Ctrl + Shift + S         Find in files
  - Ctrl + K Ctrl + F        Formatting selected code (prettier)
-
 
