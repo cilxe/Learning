@@ -1,8 +1,8 @@
-# Windows Commands & Batch Scripts
+# Windows Commands (Batch Script) & PowerShell
 
-### Commands
+## Command Prompt
 
-##### 1. **Apply to Current Commands Environment**
+### 1. **Apply to Current Commands Environment**
  <h1 id=1></h1>
 
    - [cd / chdir](#cd)
@@ -16,7 +16,7 @@
    - [for](#for)
    - [goto](#goto)
 
-##### 2. **Apply to System, Runing Programs**
+### 2. **Apply to System, Runing Programs**
 <h1 id=2></h1>
 
    - [convert](#convert) [Disk Type]
@@ -35,8 +35,9 @@
    - [shutdown](#shutdown)
    - [taskkill](#taskkill)
    - [wmic](#wmic)
+   - [CheckNetIsolation: UWP App Network Manageent](#checkNetIsolation) [CheckNetIsolation.exe]
 
-##### 3. **Apply to Files**
+### 3. **Apply to Files**
    <h1 id=3></h1>
 
    - [attrib](#attrib)
@@ -107,8 +108,8 @@ echo <messages>
 ```
 
 
-[<h3 id=date-time>DATE & TIME</h3>](#2)
-Displays or sets the system date & time.
+#### [<h3 id=date-time>DATE & TIME</h3>](#2)
+##### Displays or sets the system date & time.
 ```
 @REM Get Current Date & Time
 %date% %time%
@@ -123,3 +124,29 @@ echo %date:~0,4%-%date:~5,2%-%date:~8,2%
 echo %time:~0,2%:%time:~3,2%:%time:~6,2%
 10:00:00
 ```
+#### [<h3 id=checkNetIsolation>CheckNetIsolation: UWP App Network Manageent</h3>](#2)
+
+##### Apply proxy exemption to UWP apps
+1. Method 1: apply a single app with its SID
+```
+# Find UWP App SID from Registry [Win + R > regedit]
+HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings\
+
+# Find UWP App package name in Powershell
+powershell get-appxpackage *AppName
+
+# Apply setting to app with SID or PackageName
+# SID from above     # AppPackageName find with powershell
+CheckNetIsolation loopbackexempt -a -p=SID
+CheckNetIsolation loopbackexempt -a -n=AppPackageName
+```
+2. Method 2: Apply to all with for loop
+```
+FOR /F "tokens=11 delims=\" %s IN ('REG QUERY "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings"') DO CheckNetIsolation LoopbackExempt -a -p=%s
+```
+
+
+
+
+
+## Powershell

@@ -1,3 +1,6 @@
+
+# JavaScript Main
+
 # JS Basis
 
 # JS Objects
@@ -71,3 +74,27 @@ pushState({}, "Replace", "https://w3.org")
 # JS Class (Introduced with ECMAScript 2015 (ES6))
 
 # JS RegExp (Regular Expressions)
+
+
+# JS Extensions
+
+## ESLint
+
+### Get-started
+```
+# Initial a project directory
+npm init --yes
+
+# Install ESLint Locally or Globally
+npm install eslint --save-dev  // locally in development
+npm install -g eslint //GLOBALLY
+
+# Initialise ESLint configuration
+# git bash
+./node_modules/.bin/eslint --init   // locally
+./node_modules/.bin/eslint yourfile.js  // globally
+
+# command prompt
+npm init @eslint/config
+
+```

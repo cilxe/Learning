@@ -5,4 +5,3 @@
 
  - Empty lines  
    ^\s*(?=\r?$)\n
-- 
