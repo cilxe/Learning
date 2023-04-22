@@ -1,0 +1,9 @@
+# Ignore directories
+Unpack/
+.vscode
+
+# Ignore files
+Push.bat
+
+# Ignore all files under the directory
+/Unpack/*
