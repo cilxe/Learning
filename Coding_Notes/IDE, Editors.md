@@ -18,8 +18,11 @@
 ## Visual Studio Code
 #### [Shorcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 ##### Useful Shortcuts (Ctrl + K, Ctrl + S)
- - Ctrl + Shift + S         Find in files
- - Ctrl + K Ctrl + F        Formatting selected code (prettier)
- - Ctrl + Shift + P         Show all commands
-   - Delete Duplicate Lines (Ctrl + Alt + D)
+- Ctrl + Shift + S         Find in files
+- Ctrl + K Ctrl + F        Formatting selected code (prettier)
+- Ctrl + Shift + P         Show all commands
+  - Delete Duplicate Lines (Ctrl + Alt + D)
+
+#### Custom Shortcuts
+- Alt + Win + C            Toggle code block
 
