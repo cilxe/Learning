@@ -111,6 +111,18 @@ echo <messages>
 :: Output the message text on the screen
 ```
 
+[<h3 id=set>SET</h3>](#1)
+Displays, sets, or removes cmd.exe environment variables. If used without parameters, set displays the current environment variable settings.  
+```
+set [<variable>=[<string>]]
+set [/p] <variable>=[<promptString>]
+set /a <variable>=<expression>
+
+```
+
+
+
+
 [<h3 id=for>FOR</h3>](#1)
 **Syntax**
 ```
